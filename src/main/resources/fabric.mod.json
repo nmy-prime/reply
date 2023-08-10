@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "test_demo",
+  "id": "reply_demo",
   "version": "1.0.0",
 
   "name": "Reply Mod",
@@ -23,7 +23,7 @@
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "reply.mixins.json"
   ],
 
   "depends": {

@@ -65,7 +65,7 @@ public class TwoSlotsRecipe implements Recipe<CraftingInventory> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return null;
+        return TwoSlotsRecipeSerializer.INSTANCE;
     }
 
     @Override
