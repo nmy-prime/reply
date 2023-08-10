@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "W W",
+    "   "
+  ],
+  "key": {
+    "W": {
+      "item": "tutorial:fabric_item"
+    }
+  },
+  "result": {
+    "item": "tutorial:reply_material_helmet",
+    "count": 1
+  }
+}

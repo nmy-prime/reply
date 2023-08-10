@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W W",
+    "W W"
+  ],
+  "key": {
+    "W": {
+      "item": "tutorial:fabric_item"
+    }
+  },
+  "result": {
+    "item": "tutorial:reply_material_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "WW ",
+      "WR ",
+      " R "
+    ],
+    "key": {
+      "W": {
+        "item": "tutorial:fabric_item"
+      },
+      "R": {
+        "item": "tutorial:iron_stick"
+      }
+    },
+    "result": {
+      "item": "tutorial:goofy_axe",
+      "count": 1
+    }
+}

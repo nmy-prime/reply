@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.nmy_prime.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "CrossBowItemMixin"
+  ],
+  "client": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

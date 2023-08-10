@@ -1,0 +1,18 @@
+{
+    "item.tutorial.reply_item": "答辩",
+    "item.tutorial.goofy_axe": "答辩斧",
+    "item.tutorial.custom.tooltip": "依托答辩",
+    "itemGroup.tutorial.my_group": "DEMO",
+    "item.tutorial.baked_bread": "馍片",
+    "item.tutorial.goofy_sword": "牛子的圣遗物",
+    "item.tutorial.iron_stick": "铁棍",
+    "item.tutorial.goofy_sword.tooltip": "这里蕴含着牛子的强大力量",
+    "item.tutorial.reply_material_helmet": "答辩头盔",
+    "item.tutorial.reply_material_boots": "答辩靴",
+    "item.tutorial.reply_material_leggings": "答辩护腿",
+    "item.tutorial.reply_material_chestplates": "答辩胸甲",
+    "enchantment.tutorial.thunder": "牛の力量",
+    "enchantment.tutorial.poison": "剧毒",
+    "item.tutorial.goofy_pickaxe": "答辩镐",
+    "item.tutorial.mixin.crossbow": "注入了牛子の神秘力量"
+}

@@ -1,0 +1,18 @@
+{
+    "item.tutorial.reply_item": "Reply",
+    "item.tutorial.goofy_axe": "Reply Axe",
+    "item.tutorial.custom.tooltip": "A Lump Of Reply",
+    "itemGroup.tutorial.my_group": "Reply",
+    "item.tutorial.baked_bread": "Bake Bread",
+    "item.tutorial.goofy_sword": "牛子's Holy Relic",
+    "item.tutorial.iron_stick": "Iron Stick",
+    "item.tutorial.goofy_sword.tooltip": "It contains the great power of 牛子",
+    "item.tutorial.reply_material_helmet": "Reply Helmet",
+    "item.tutorial.reply_material_boots": "Reply Boots",
+    "item.tutorial.reply_material_leggings": "Reply Leggings",
+    "item.tutorial.reply_material_chestplates": "Reply Chestplates",
+    "enchantment.tutorial.thunder": "牛's Force",
+    "enchantment.tutorial.poison": "Poison",
+    "item.tutorial.goofy_pickaxe": "Reply Pickaxe",
+    "item.tutorial.mixin.crossbow": "Mixed 牛's force"
+}
