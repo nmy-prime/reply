@@ -63,9 +63,9 @@ public class ReplyArmorMaterial implements ArmorMaterial {
     private static final Item REPLY_MATERIAL_LEGGINGS = new ArmorItem(REPLY_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().group(Main.MY_GROUP));
     private static final Item REPLY_MATERIAL_BOOTS = new ArmorItem(REPLY_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().group(Main.MY_GROUP));
     public static void register() {
-        Registry.register(Registry.ITEM,new Identifier("tutorial", "reply_material_helmet"), REPLY_MATERIAL_HELMET);
-        Registry.register(Registry.ITEM,new Identifier("tutorial", "reply_material_chestplates"), REPLY_MATERIAL_CHESTPLATE);
-        Registry.register(Registry.ITEM,new Identifier("tutorial", "reply_material_boots"), REPLY_MATERIAL_BOOTS);
-        Registry.register(Registry.ITEM,new Identifier("tutorial", "reply_material_leggings"), REPLY_MATERIAL_LEGGINGS);
+        Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_helmet"), REPLY_MATERIAL_HELMET);
+        Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_chestplates"), REPLY_MATERIAL_CHESTPLATE);
+        Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_boots"), REPLY_MATERIAL_BOOTS);
+        Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_leggings"), REPLY_MATERIAL_LEGGINGS);
     }
 }

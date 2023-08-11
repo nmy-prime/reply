@@ -1,0 +1,22 @@
+{
+    "item.reply.reply_item": "Reply",
+    "item.reply.goofy_axe": "Reply Axe",
+    "item.reply.custom.tooltip": "A Lump Of Reply",
+    "itemGroup.reply.my_group": "Reply",
+    "item.reply.baked_bread": "Bake Bread",
+    "item.reply.goofy_sword": "牛子's Holy Relic",
+    "item.reply.iron_stick": "Iron Stick",
+    "tooltip.reply.goofy_sword.tooltip": "It contains the great power of 牛子",
+    "item.reply.reply_material_helmet": "Reply Helmet",
+    "item.reply.reply_material_boots": "Reply Boots",
+    "item.reply.reply_material_leggings": "Reply Leggings",
+    "item.reply.reply_material_chestplates": "Reply Chestplates",
+    "enchantment.reply.thunder": "牛's Force",
+    "enchantment.reply.poison": "Poison",
+    "item.reply.goofy_pickaxe": "Reply Pickaxe",
+    "tooltip.reply.mixin.crossbow": "Mixed 牛's force",
+    "tooltip.reply.sword_with_soul": "Consecration",
+    "item.reply.bleak_sword_soul": "Bleak Sword Soul",
+    "item.reply.glint_sword_soul": "Glint Sword Soul",
+    "tooltip.reply.goofy_sword_with_soul": "It has had 牛's force again,it will seizes all of your booties as a price when you using it"
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "reply_demo",
+  "id": "reply",
   "version": "1.0.0",
 
   "name": "Reply Mod",
@@ -9,7 +9,7 @@
     "NMY_Prime"
   ],
   "contact": {
-    "homepage": "https://github.com/NMYPrime/reply-mod-1.17",
+    "homepage": "https://github.com/NMYPrime/reply-mod",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 

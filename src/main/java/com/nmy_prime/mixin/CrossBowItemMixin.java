@@ -22,7 +22,7 @@ public class CrossBowItemMixin {
 
     @Inject(at = @At("HEAD"), method = "appendTooltip")
     public void mixinAppendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context, CallbackInfo ci){
-        tooltip.add(new TranslatableText("item.tutorial.mixin.crossbow"));
+        tooltip.add(new TranslatableText("tooltip.reply.mixin.crossbow"));
     }
     /**
      * @author NMY_prime

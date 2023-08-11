@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "WW ",
+      "WR ",
+      " R "
+    ],
+    "key": {
+      "W": {
+        "item": "reply:reply_item"
+      },
+      "R": {
+        "item": "reply:iron_stick"
+      }
+    },
+    "result": {
+      "item": "reply:goofy_axe",
+      "count": 1
+    }
+}
