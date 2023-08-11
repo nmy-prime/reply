@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "W W",
+    "W W"
+  ],
+  "key": {
+    "W": {
+      "item": "reply:reply_item"
+    }
+  },
+  "result": {
+    "item": "reply:reply_material_leggings",
+    "count": 1
+  }
+}

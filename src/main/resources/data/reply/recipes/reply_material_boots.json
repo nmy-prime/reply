@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W W",
+    "W W"
+  ],
+  "key": {
+    "W": {
+      "item": "reply:reply_item"
+    }
+  },
+  "result": {
+    "item": "reply:reply_material_boots",
+    "count": 1
+  }
+}

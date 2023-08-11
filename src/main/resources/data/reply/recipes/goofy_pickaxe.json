@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    " R ",
+    " R "
+  ],
+  "key": {
+    "W": {
+      "item": "reply:reply_item"
+    },
+    "R": {
+      "item": "reply:iron_stick"
+    }
+  },
+  "result": {
+    "item": "reply:goofy_pickaxe",
+    "count": 1
+  }
+}

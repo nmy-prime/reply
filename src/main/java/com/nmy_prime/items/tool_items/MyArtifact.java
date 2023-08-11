@@ -26,7 +26,7 @@ import java.util.Objects;
  * 对应牛子的圣遗物，appendTooltip方法为其添加物品描述，
  * postHit方法中是一段来自美西螈桶的召唤闪电代码，
  * 将给予玩家2秒999级的抗性提升，10秒的抗火和5秒的力量2效果
- * 在ReplayMaterial类里注册
+ * 实例在ReplayMaterial类里
  */
 public class MyArtifact extends SwordItem {
 
@@ -35,48 +35,60 @@ public class MyArtifact extends SwordItem {
     }
 
     @Override
+    public boolean hasGlint(ItemStack stack) {
+        return stack.getNbt() != null && !stack.getNbt().isEmpty() && stack.getNbt().getInt("soul") == 1;
+    }
+
+    @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("item.tutorial.goofy_sword.tooltip").formatted(Formatting.GOLD));
+        tooltip.add(new TranslatableText("tooltip.reply.goofy_sword.tooltip").formatted(Formatting.GRAY));
+        if (itemStack.getNbt() != null && !itemStack.getNbt().isEmpty() && itemStack.getNbt().getInt("soul") == 1) {
+            tooltip.add(new TranslatableText("tooltip.reply.sword_with_soul").formatted(Formatting.BLUE));
+            tooltip.set(1, new TranslatableText("tooltip.reply.goofy_sword_with_soul").formatted(Formatting.GOLD));
+        }
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 
-        World world = attacker.getEntityWorld();
+        if (stack.getNbt() != null && !stack.getNbt().isEmpty() && stack.getNbt().getInt("soul") == 1) {
 
-        if (target != null) {
+            World world = attacker.getEntityWorld();
 
-            ServerWorld serverWorld = Objects.requireNonNull(world.getServer())
-                    .getWorld( (target)
-                            .getEntityWorld()
-                            .getRegistryKey());
+            if (target != null) {
 
-            if (serverWorld != null) {
-                attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 2, 999), attacker);
-                EntityType.LIGHTNING_BOLT.spawnFromItemStack(serverWorld,
-                        null,
-                        (PlayerEntity) attacker,
-                        target.getBlockPos(),
-                        SpawnReason.MOB_SUMMONED,
-                        true,
-                        false);
-                LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, serverWorld);
-                serverWorld.playSoundFromEntity(null,
-                        lightning,
-                        SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT,
-                        SoundCategory.NEUTRAL,
-                        1.0f,
-                        1.0f);
-                serverWorld.spawnParticles(ParticleTypes.EXPLOSION,
-                        (target).getX(),
-                        (target).getY(),
-                        (target).getZ(),
-                        1, 0.0, 0.0, 0.0, 0.0);
+                ServerWorld serverWorld = Objects.requireNonNull(world.getServer())
+                        .getWorld( (target)
+                                .getEntityWorld()
+                                .getRegistryKey());
+
+                if (serverWorld != null) {
+                    attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 2, 999), attacker);
+                    EntityType.LIGHTNING_BOLT.spawnFromItemStack(serverWorld,
+                            null,
+                            (PlayerEntity) attacker,
+                            target.getBlockPos(),
+                            SpawnReason.EVENT,
+                            true,
+                            false);
+                    LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, serverWorld);
+                    serverWorld.playSoundFromEntity(null,
+                            lightning,
+                            SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT,
+                            SoundCategory.NEUTRAL,
+                            1.0f,
+                            1.0f);
+                    serverWorld.spawnParticles(ParticleTypes.EXPLOSION,
+                            (target).getX(),
+                            (target).getY(),
+                            (target).getZ(),
+                            1, 0.0, 0.0, 0.0, 0.0);
+                }
             }
-        }
 
-        attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,20 * 5,1));
-        attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,20 * 10,0));
+            attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,20 * 5,1));
+            attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,20 * 10,0));
+        }
 
         return super.postHit(stack, target, attacker);
     }

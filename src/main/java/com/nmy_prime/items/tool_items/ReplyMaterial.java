@@ -17,8 +17,8 @@ public class ReplyMaterial implements ToolMaterial {
     private static final ToolItem GOOFY_AXE = new ReplyAxeItem(INSTANCE, 5.0F, -3.0F,
             new Item.Settings().group(Main.MY_GROUP));
     // 圣水杯
-    private static final ToolItem GOOFY_SWORD = new MyArtifact(INSTANCE, 8, -0.5F,
-            new Item.Settings().group(Main.MY_GROUP).maxDamage(-1));
+    public static final ToolItem GOOFY_SWORD = new MyArtifact(INSTANCE, 8, -0.5F,
+            new Item.Settings().group(Main.MY_GROUP));
     // GOOFY镐子
     private static final ToolItem GOOFY_PICKAXE = new ReplyPickaxeItem(INSTANCE, 4, -2.5F,
             new FabricItemSettings().group(Main.MY_GROUP));
@@ -61,9 +61,9 @@ public class ReplyMaterial implements ToolMaterial {
 
     // 注册方法
     public static void register() {
-        Registry.register(Registry.ITEM, new Identifier("tutorial", "goofy_pickaxe"), GOOFY_PICKAXE);
-        Registry.register(Registry.ITEM, new Identifier("tutorial", "goofy_axe"), GOOFY_AXE);
-        Registry.register(Registry.ITEM, new Identifier("tutorial", "goofy_sword"), GOOFY_SWORD);
+        Registry.register(Registry.ITEM, new Identifier("reply", "goofy_pickaxe"), GOOFY_PICKAXE);
+        Registry.register(Registry.ITEM, new Identifier("reply", "goofy_axe"), GOOFY_AXE);
+        Registry.register(Registry.ITEM, new Identifier("reply", "goofy_sword"), GOOFY_SWORD);
     }
 
 }

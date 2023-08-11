@@ -1,0 +1,22 @@
+{
+    "item.reply.reply_item": "答辩",
+    "item.reply.goofy_axe": "答辩斧",
+    "item.reply.custom.tooltip": "依托答辩",
+    "itemGroup.reply.my_group": "DEMO",
+    "item.reply.baked_bread": "馍片",
+    "item.reply.goofy_sword": "牛子的圣遗物",
+    "item.reply.iron_stick": "铁棍",
+    "tooltip.reply.goofy_sword.tooltip": "这里蕴含着牛子的强大力量",
+    "item.reply.reply_material_helmet": "答辩头盔",
+    "item.reply.reply_material_boots": "答辩靴",
+    "item.reply.reply_material_leggings": "答辩护腿",
+    "item.reply.reply_material_chestplates": "答辩胸甲",
+    "enchantment.reply.thunder": "牛の力量",
+    "enchantment.reply.poison": "剧毒",
+    "item.reply.goofy_pickaxe": "答辩镐",
+    "tooltip.reply.mixin.crossbow": "注入了牛子の神秘力量",
+    "tooltip.reply.sword_with_soul": "已注魂",
+    "item.reply.bleak_sword_soul": "暗淡剑魂",
+    "item.reply.glint_sword_soul": "光华剑魂",
+    "tooltip.reply.goofy_sword_with_soul": "这把利剑再度拥有牛子的力量，当你使用它时，作为代价，它会夺取你一切战利品"
+}

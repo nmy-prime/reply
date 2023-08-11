@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W W",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "reply:reply_item"
+    }
+  },
+  "result": {
+    "item": "reply:reply_material_chestplates",
+    "count": 1
+  }
+}
