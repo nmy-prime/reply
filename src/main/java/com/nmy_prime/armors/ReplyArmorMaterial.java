@@ -39,7 +39,7 @@ public class ReplyArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ReplyItem.FABRIC_ITEM);
+        return Ingredient.ofItems(ReplyItem.REPLY_ITEM);
     }
 
     @Override
@@ -65,7 +65,7 @@ public class ReplyArmorMaterial implements ArmorMaterial {
     public static void register() {
         Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_helmet"), REPLY_MATERIAL_HELMET);
         Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_chestplates"), REPLY_MATERIAL_CHESTPLATE);
-        Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_boots"), REPLY_MATERIAL_BOOTS);
         Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_leggings"), REPLY_MATERIAL_LEGGINGS);
+        Registry.register(Registry.ITEM,new Identifier("reply", "reply_material_boots"), REPLY_MATERIAL_BOOTS);
     }
 }

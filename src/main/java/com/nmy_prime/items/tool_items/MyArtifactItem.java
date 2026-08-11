@@ -28,15 +28,17 @@ import java.util.Objects;
  * 将给予玩家2秒999级的抗性提升，10秒的抗火和5秒的力量2效果
  * 实例在ReplayMaterial类里
  */
-public class MyArtifact extends SwordItem {
+public class MyArtifactItem extends SwordItem {
 
-    public MyArtifact(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+    public MyArtifactItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
     public boolean hasGlint(ItemStack stack) {
-        return stack.getNbt() != null && !stack.getNbt().isEmpty() && stack.getNbt().getInt("soul") == 1;
+        if (!stack.hasNbt()) return false;
+        assert stack.getNbt() != null;
+        return stack.getNbt().getInt("soul") == 1;
     }
 
     @Override
@@ -50,18 +52,13 @@ public class MyArtifact extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-
         if (stack.getNbt() != null && !stack.getNbt().isEmpty() && stack.getNbt().getInt("soul") == 1) {
-
             World world = attacker.getEntityWorld();
-
             if (target != null) {
-
                 ServerWorld serverWorld = Objects.requireNonNull(world.getServer())
                         .getWorld( (target)
                                 .getEntityWorld()
                                 .getRegistryKey());
-
                 if (serverWorld != null) {
                     attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 2, 999), attacker);
                     EntityType.LIGHTNING_BOLT.spawnFromItemStack(serverWorld,
@@ -85,11 +82,9 @@ public class MyArtifact extends SwordItem {
                             1, 0.0, 0.0, 0.0, 0.0);
                 }
             }
-
             attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,20 * 5,1));
             attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,20 * 10,0));
         }
-
         return super.postHit(stack, target, attacker);
     }
 

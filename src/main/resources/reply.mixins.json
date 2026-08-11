@@ -7,7 +7,7 @@
     "CrossBowItemMixin"
   ],
   "client": [
-    "ExampleMixin"
+    "MainMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -16,7 +16,7 @@ public class ReplyItem extends Item {
         super(settings);
     }
     // 新物品
-    public static final ReplyItem FABRIC_ITEM = new ReplyItem(new FabricItemSettings()
+    public static final ReplyItem REPLY_ITEM = new ReplyItem(new FabricItemSettings()
             .group(Main.MY_GROUP)
             .maxCount(64));
 

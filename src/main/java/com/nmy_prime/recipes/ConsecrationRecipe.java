@@ -62,7 +62,7 @@ public class ConsecrationRecipe extends SpecialCraftingRecipe {
 
         if (hasSoul && hasWeapon && list.size() == 2) {
             NbtCompound compound = new NbtCompound();
-            compound.putInt("soul", 1); // 通过nbt铸魂
+            compound.putInt("soul", 1); // nbt铸魂
             byte i = 1;
             compound.putByte("Unbreakable", i); // 无法破坏
             ItemStack outputSword = new ItemStack(ReplyMaterial.GOOFY_SWORD, 1);

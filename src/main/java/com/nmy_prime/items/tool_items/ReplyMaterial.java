@@ -12,15 +12,15 @@ import net.minecraft.util.registry.Registry;
 
 public class ReplyMaterial implements ToolMaterial {
     // 实例
-    private static final ReplyMaterial INSTANCE = new ReplyMaterial();
+    public static final ReplyMaterial INSTANCE = new ReplyMaterial();
     // GOOFY斧头
-    private static final ToolItem GOOFY_AXE = new ReplyAxeItem(INSTANCE, 5.0F, -3.0F,
+    public static final ToolItem GOOFY_AXE = new ReplyAxeItem(INSTANCE, 5.0F, -3.0F,
             new Item.Settings().group(Main.MY_GROUP));
     // 圣水杯
-    public static final ToolItem GOOFY_SWORD = new MyArtifact(INSTANCE, 8, -0.5F,
+    public static final ToolItem GOOFY_SWORD = new MyArtifactItem(INSTANCE, 8, -0.5F,
             new Item.Settings().group(Main.MY_GROUP));
     // GOOFY镐子
-    private static final ToolItem GOOFY_PICKAXE = new ReplyPickaxeItem(INSTANCE, 4, -2.5F,
+    public static final ToolItem GOOFY_PICKAXE = new ReplyPickaxeItem(INSTANCE, 4, -2.5F,
             new FabricItemSettings().group(Main.MY_GROUP));
 
     // 耐久度
@@ -38,7 +38,7 @@ public class ReplyMaterial implements ToolMaterial {
     // 武器伤害
     @Override
     public float getAttackDamage() {
-        return 20.0F;
+        return 999.0F;
     }
 
     // 挖矿等级
@@ -56,7 +56,7 @@ public class ReplyMaterial implements ToolMaterial {
     // 修复材料
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ReplyItem.FABRIC_ITEM);
+        return Ingredient.ofItems(ReplyItem.REPLY_ITEM);
     }
 
     // 注册方法
