@@ -26,7 +26,7 @@ public class CrossBowItemMixin {
     }
     /**
      * @author NMY_prime
-     * @reason 闲的蛋疼
+     * @reason  闲的蛋疼
      */
     @Overwrite
     private static float getSpeed(ItemStack stack) {

@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.nmy_prime.Main"
+    ],
+    "client": [
+      "com.nmy_prime.events.ClientEventHandler"
     ]
   },
   "mixins": [

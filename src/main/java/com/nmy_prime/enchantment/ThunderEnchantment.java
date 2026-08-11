@@ -1,8 +1,11 @@
 package com.nmy_prime.enchantment;
 
+import com.nmy_prime.reverse.NewLightningEntity;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
@@ -44,20 +47,14 @@ public class ThunderEnchantment extends Enchantment {
 
         if (target instanceof LivingEntity) {
 
-            ServerWorld serverWorld = Objects.requireNonNull(world.getServer())
-                    .getWorld( (target)
-                            .getEntityWorld()
-                            .getRegistryKey());
-
+            ServerWorld serverWorld = Objects.requireNonNull(world.getServer()).getWorld( (target).getEntityWorld().getRegistryKey());
             if (serverWorld != null) {
-                EntityType.LIGHTNING_BOLT.spawnFromItemStack(serverWorld,
-                        null,
-                        (PlayerEntity) user,
-                        target.getBlockPos(),
-                        SpawnReason.MOB_SUMMONED,
-                        true,
-                        false);
-                LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, serverWorld);
+
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 2, 999), user);
+                NewLightningEntity lightning = new NewLightningEntity(EntityType.LIGHTNING_BOLT, serverWorld);
+                lightning.setPos(target.getX(), target.getY(), target.getZ());
+                serverWorld.spawnEntity(lightning);
+
                 serverWorld.playSoundFromEntity(null,
                         lightning,
                         SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT,

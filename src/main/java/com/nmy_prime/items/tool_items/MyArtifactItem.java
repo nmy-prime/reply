@@ -1,8 +1,8 @@
 package com.nmy_prime.items.tool_items;
 
+import com.nmy_prime.reverse.NewLightningEntity;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -55,31 +55,14 @@ public class MyArtifactItem extends SwordItem {
         if (stack.getNbt() != null && !stack.getNbt().isEmpty() && stack.getNbt().getInt("soul") == 1) {
             World world = attacker.getEntityWorld();
             if (target != null) {
-                ServerWorld serverWorld = Objects.requireNonNull(world.getServer())
-                        .getWorld( (target)
-                                .getEntityWorld()
-                                .getRegistryKey());
+                ServerWorld serverWorld = Objects.requireNonNull(world.getServer()).getWorld( (target).getEntityWorld().getRegistryKey());
                 if (serverWorld != null) {
                     attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 2, 999), attacker);
-                    EntityType.LIGHTNING_BOLT.spawnFromItemStack(serverWorld,
-                            null,
-                            (PlayerEntity) attacker,
-                            target.getBlockPos(),
-                            SpawnReason.EVENT,
-                            true,
-                            false);
-                    LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, serverWorld);
-                    serverWorld.playSoundFromEntity(null,
-                            lightning,
-                            SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT,
-                            SoundCategory.NEUTRAL,
-                            1.0f,
-                            1.0f);
-                    serverWorld.spawnParticles(ParticleTypes.EXPLOSION,
-                            (target).getX(),
-                            (target).getY(),
-                            (target).getZ(),
-                            1, 0.0, 0.0, 0.0, 0.0);
+                    NewLightningEntity lightning = new NewLightningEntity(EntityType.LIGHTNING_BOLT, serverWorld);
+                    lightning.setPos(target.getX(), target.getY(), target.getZ());
+                    serverWorld.spawnEntity(lightning);
+                    serverWorld.playSoundFromEntity(null, lightning, SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.NEUTRAL, 1.0f, 1.0f);
+                    serverWorld.spawnParticles(ParticleTypes.EXPLOSION, (target).getX(), (target).getY(), (target).getZ(), 1, 0.0, 0.0, 0.0, 0.0);
                 }
             }
             attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,20 * 5,1));
