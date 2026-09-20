@@ -2,6 +2,7 @@ package com.nmy_prime.items.tool_items;
 
 import com.nmy_prime.Main;
 import com.nmy_prime.items.ReplyItem;
+import com.nmy_prime.items.weapons.MyArtifactItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolItem;

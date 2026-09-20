@@ -2,6 +2,7 @@ package com.nmy_prime;
 
 import com.nmy_prime.blocks.IncarnonCraftBlockEntity;
 import com.nmy_prime.blocks.ReplyBlocks;
+import com.nmy_prime.items.entities.ModEntities;
 import com.nmy_prime.recipes.ConsecrationRecipe;
 import net.fabricmc.api.ModInitializer;
 import com.nmy_prime.enchantment.FabricEnchantments;
@@ -47,6 +48,8 @@ public class Main implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModEntities.registerEntities();
+
 		// 向末影龙和凋灵战利品表添加物品
 		LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, table, setter) ->{
 			if (ENDER_DRAGON_LOOT_TABLE_ID.equals(id)) {

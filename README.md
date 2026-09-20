@@ -1,29 +1,23 @@
-# reply-mod-1.17.*
+# Reply Mod
 
-## 更新日志
+Minecraft Fabric 1.17 RPG扩展模组
 
-###  v1.0.1 update:
+## Features
 
-- [x] 添加附魔--剧毒/Poison（最高四级）
-- [x] 提高 *牛の力量* 附魔权重，可从附魔台中获得
-- [x] 使用圣遗物之后获得两秒抗性提升999，抵消雷电伤害。同时获得5秒力量2buff
-- [x] 移除废物物品 *皇家护卫盾* ，添加新废物 *答辩镐*
-- [x] 不再依赖 [*Fabric Shield Lib*](https://github.com/StellarWind22/Fabric-Shield-Lib) 作为模组前置
-- [x] 提高答辩套耐久，对标钻石套，修改 *牛子的圣遗物* 伤害，由41->29
-- [x] 修改答辩合成配方，如下:  
-| 空格 | 铁锭 | 空格 |  
-| 铁锭 | 钻石 | 铁锭 |  
-| 空格 | 铁锭 | 空格 |
+- Custom weapons
+- Custom enchantments
+- Boss drop system
+- Special crafting system
 
-### v1.0.2 update:
+## Tech
 
-- [x] 添加新物品 *光华剑魂* *暗淡剑魂*，*光华剑魂* 由boss级生物掉落
-- [x] *光华剑魂* 可用于给牛子剑注魔，注魔后变为暗淡剑魂
-- [x] 注魔可增加牛子剑伤害及特殊属性，尚未完善
-- [x] 修改内部命名空间，由tutorial模组变为reply正式模组
-- [x] 牛子剑机制更改，只有在注魔后可获得逆天属性，如打雷加buff等
+- Java 16
+- Fabric API
+- Mixin
+- Gradle
 
+## Build
 
+./gradlew build
 
-
-
+## Screenshots

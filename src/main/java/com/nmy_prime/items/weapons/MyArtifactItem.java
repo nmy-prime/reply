@@ -1,13 +1,11 @@
-package com.nmy_prime.items.tool_items;
+package com.nmy_prime.items.weapons;
 
 import com.nmy_prime.reverse.NewLightningEntity;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
@@ -21,13 +19,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import java.util.List;
 import java.util.Objects;
-/**
- * @author NMY_PRIME
- * 对应牛子的圣遗物，appendTooltip方法为其添加物品描述，
- * postHit方法中是一段来自美西螈桶的召唤闪电代码，
- * 将给予玩家2秒999级的抗性提升，10秒的抗火和5秒的力量2效果
- * 实例在ReplayMaterial类里
- */
+
 public class MyArtifactItem extends SwordItem {
 
     public MyArtifactItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
