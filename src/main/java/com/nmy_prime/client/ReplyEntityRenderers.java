@@ -7,5 +7,6 @@ import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 public class ReplyEntityRenderers {
     public static void register(){
         EntityRendererRegistry.register(ReplyEntities.COPPER_COIN, FlyingItemEntityRenderer::new);
+
     }
 }
