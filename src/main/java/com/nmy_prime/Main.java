@@ -2,10 +2,10 @@ package com.nmy_prime;
 
 import com.nmy_prime.blocks.IncarnonCraftBlockEntity;
 import com.nmy_prime.blocks.ReplyBlocks;
-import com.nmy_prime.items.entities.ModEntities;
+import com.nmy_prime.items.entities.ReplyEntities;
 import com.nmy_prime.recipes.ConsecrationRecipe;
 import net.fabricmc.api.ModInitializer;
-import com.nmy_prime.enchantment.FabricEnchantments;
+import com.nmy_prime.enchantment.ReplyEnchantments;
 import com.nmy_prime.items.ReplyItems;
 import com.nmy_prime.items.ReplyItem;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -48,7 +48,7 @@ public class Main implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-        ModEntities.registerEntities();
+        ReplyEntities.registerEntities();
 
 		// 向末影龙和凋灵战利品表添加物品
 		LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, table, setter) ->{
@@ -65,7 +65,7 @@ public class Main implements ModInitializer {
 			}
 		});
 
-		FabricEnchantments.registerFabricEnchantments();
+		ReplyEnchantments.registerFabricEnchantments();
 		ReplyItems.register();
 		ReplyBlocks.register();
 

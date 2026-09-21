@@ -8,7 +8,7 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class ModEntities {
+public class ReplyEntities {
 
     public static final EntityType<CopperCoinEntity> COPPER_COIN =
             register("copper_coin", CopperCoinEntity::new, 0.25f, 0.25f);
