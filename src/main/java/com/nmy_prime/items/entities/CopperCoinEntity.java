@@ -2,9 +2,11 @@ package com.nmy_prime.items.entities;
 
 import com.nmy_prime.items.ReplyItems;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.Monster;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleTypes;
@@ -33,6 +35,11 @@ public class CopperCoinEntity extends ThrownItemEntity {
             if(hitResult instanceof EntityHitResult entityHitResult) {
                 Entity target = entityHitResult.getEntity();
                 target.damage(DamageSource.thrownProjectile(this, getOwner()), 1);
+                if (target instanceof LivingEntity livingTarget) {
+                    if (livingTarget.getGroup() == EntityGroup.UNDEAD) {
+                        livingTarget.setOnFireFor(5);
+                    }
+                }
             }
         }
         spawnParticles();
@@ -64,7 +71,7 @@ public class CopperCoinEntity extends ThrownItemEntity {
 
         if(!world.isClient){
             LivingEntity target = findTarget();
-            if(target != null) {
+            if(target != null && target.isAlive() && target instanceof Monster) {
                 Vec3d direction = target.getPos().add(0,target.getHeight()/2,0).subtract(getPos()).normalize();
                 double dot = getVelocity().normalize().dotProduct(direction);
                 if (dot > 0) {
