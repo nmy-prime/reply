@@ -8,6 +8,8 @@ Minecraft Fabric 1.17 RPG扩展模组
 - Custom enchantments
 - Boss drop system
 - Special crafting system
+- Weapon growing system
+- Chinese traditional culture
 
 ## Tech
 
@@ -15,6 +17,7 @@ Minecraft Fabric 1.17 RPG扩展模组
 - Fabric API
 - Mixin
 - Gradle
+- Blockbench
 
 ## Build
 
